@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "3da4eeec-6238-471f-ab55-ce0d742fa76e",
-		"name": "Udacity",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "efa8a239-739b-4d45-8098-447298c521fb",
+		"name": "Udacity Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23050729"
 	},
 	"item": [
 		{
@@ -113,6 +114,34 @@
 			"response": []
 		},
 		{
+			"name": "Save Schedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"activities\": [\"PETTING\", \"FEEDING\"],\r\n  \"employeeIds\": [\"3\"],\r\n  \"petIds\": [\"2\"],\r\n  \"date\": \"2015-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/schedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Add Employee Schedule",
 			"request": {
 				"method": "PUT",
@@ -134,7 +163,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/user/employee/1",
+					"raw": "http://localhost:8082/user/employee/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -143,7 +172,7 @@
 					"path": [
 						"user",
 						"employee",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -211,7 +240,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/user/employee/1",
+					"raw": "http://localhost:8082/user/employee/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -220,7 +249,7 @@
 					"path": [
 						"user",
 						"employee",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -251,7 +280,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/schedule/pet/1",
+					"raw": "http://localhost:8082/schedule/pet/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -260,7 +289,7 @@
 					"path": [
 						"schedule",
 						"pet",
-						"1"
+						"2"
 					]
 				}
 			},
@@ -291,7 +320,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/schedule/employee/2",
+					"raw": "http://localhost:8082/schedule/employee/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -300,7 +329,7 @@
 					"path": [
 						"schedule",
 						"employee",
-						"2"
+						"3"
 					]
 				}
 			},
@@ -331,7 +360,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/schedule/employee/2",
+					"raw": "http://localhost:8082/schedule/employee/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -340,7 +369,7 @@
 					"path": [
 						"schedule",
 						"employee",
-						"2"
+						"3"
 					]
 				}
 			},
@@ -410,15 +439,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/user/customer",
+					"raw": "http://localhost:8082/pet",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8082",
 					"path": [
-						"user",
-						"customer"
+						"pet"
 					]
 				}
 			},
@@ -489,7 +517,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/user/customer/pet/1",
+					"raw": "http://localhost:8082/user/customer/pet/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -499,12 +527,11 @@
 						"user",
 						"customer",
 						"pet",
-						"1"
+						"2"
 					]
 				}
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
