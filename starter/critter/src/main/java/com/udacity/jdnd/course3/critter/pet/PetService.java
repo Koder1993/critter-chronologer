@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Transactional
@@ -29,12 +28,7 @@ public class PetService {
     }
 
     public Pet getPetById(Long petId) {
-        Optional<Pet> petOptional = petRepository.findById(petId);
-        if (petOptional.isPresent()) {
-            return petOptional.get();
-        } else {
-            throw new PetNotFoundException("Pet Not Found");
-        }
+        return petRepository.getOne(petId);
     }
 
     public List<Pet> getAllPets() {
